@@ -19,8 +19,8 @@ try:
     f1 = open("message-dechiffre.txt", 'w') #open message
 
     step = int(input("Entrez le nombre de décalage des lettres : "))
-    text = f. ()
-    f1. (encrypt(text, 26-step))
+    text = f.read()
+    f1.write(decrypt(text, 26-step))
     f.close()
     f1.close()
     print("Le message chiffré est disponible sous le nom message-dechiffre.txt")
