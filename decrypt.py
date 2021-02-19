@@ -9,4 +9,10 @@ def decrypt(text,step):
         if not char.isalpha(): #verif lettre
             result += char
         elif char.isupper():
-            result += chr
+            result += chr((ord(char) + s - 65) % 26 + 65) #majuscules
+        else:
+            result += chr((ord(char) + s - 97) % 26 + 97) #minuscules
+        return result
+
+message_chiffre1 = open("message-chiffre.txt","r")
+message_chiffre2 = open("message-chiffre","w")
